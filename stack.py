@@ -1,0 +1,42 @@
+''' 
+Stack = pilha
+A Pìlha é uma estrutura de dados abstrata
+Possui o princípio LIFO (Last In, First Out), ou seja, o último elemento adicionado é o primeiro a ser removido
+Suas aplicações:
+  Ao navegar em páginas web, a opção voltar a página anterior usa esse conceito
+  Desfazer ações em geral como editores de texto
+  Algoritmos de recursão usado em compiladores usa pilha de chamadas para manter controle de funções
+  Usado para avaliar expressões matemáticas em notação infixa e pós-fixa
+'''
+class Stack:
+  #O construtor da classe, é chamado automaticamente quando uma instância da classe é criada
+  def __init__(self):
+    self.itens = []
+    
+  def push(self, item):
+    #Adiciona no topo da pilha
+    self.itens.append(item)
+    
+  def pop(self):
+    #Remove e retorna o topo da pilha, se estiver vazia vai avisar
+    if self.is_empty():
+      raise IndexError("Empty!")
+    return self.itens.pop()
+    
+  def peek(self):
+    #Mostra o topo da pilha, se estiver vazio vai avisar
+    if self.is_empty():
+      raise IndexError("Empty!")
+    return self.itens[-1]
+    
+  def is_empty(self):
+    #Mostra True se vazia e False se tiver elementos
+    return len(self.itens) == 0
+    
+  def size(self):
+    #Mostra a quantidade de itens na pilha
+    return len(self.itens)
+    
+
+
+
