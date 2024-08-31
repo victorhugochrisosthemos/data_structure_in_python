@@ -1,8 +1,8 @@
 #Nesse caso, se o arquitvo que contém a classe for diferente do arquivo em que ela será usada, e estão os dois arquivos na mesma pasta
 #Importa a classe Pilha do arquivo pilha.py
-from stack import stack
+from stack import Stack
 
-minha_pilha = Pilha()
+minha_pilha = Stack()
 
 print("Pilha vazia? ", minha_pilha.is_empty())  
 
