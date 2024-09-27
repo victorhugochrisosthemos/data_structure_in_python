@@ -1,0 +1,4 @@
+'''
+- Pesquisa lienar
+- Pesquisa binária
+'''
